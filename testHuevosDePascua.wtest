@@ -1,12 +1,24 @@
 import huevosDePascua.*
 
-describe "group of tests" {
+describe "tests de caseria" {
 
+  method initialize(){
+  blisterHuevitos.cantHuevos(14)
+  matrioshka.otroHuevo(blisterHuevitos)
+  flor.cantDePetalos(7)
+  matrioshka.decoracion(flor)
+  caseria.agregarHuevo([matrioshka,huevoRepostero,conejo,huevoMixto,blisterHuevitos])
+  }
+
+  
   test "test 1" {
-    assert.equals(50+50, 100)
+
+
+    assert.equals(matrioshka,caseria.mayorCaloria())
   }
   test "test 2" {
-    assert.that(true)
+    assert.equals(3, caseria.faltanEncontrar())
+    assert.equals(2, caseria.cuantosConChocoBlanco())
   }
 
 }
